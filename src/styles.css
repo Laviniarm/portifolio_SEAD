@@ -1,144 +1,296 @@
-/* Container Principal */
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container principal */
 .container {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    background-color: #1e3a8a; /* Tailwind: bg-blue-900 */
 }
 
-/* Barra Lateral */
-.sidebar {
-    width: 256px; /* Equivalente a w-64 */
-    background-color: #1e40af; /* Tailwind: bg-blue-800 */
-    color: white;
-    padding: 1.5rem;
+/* Cabeçalho */
+.site-header {
+    background-color: #2b4c7e;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.sidebar h2 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.site-header .logo {
+    max-width: 350px; /* Ajuste conforme necessário */
+    height: auto;
 }
 
-.sidebar ul {
+.main-nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
-.sidebar li {
-    padding: 0.5rem;
+.main-nav ul li {
     cursor: pointer;
+    padding: 0.5rem;
     transition: background-color 0.3s;
 }
 
-.sidebar li:hover,
-.sidebar li.active {
-    background-color: #1d4ed8; /* Aproximação do Tailwind: bg-blue-700 */
+.main-nav ul li:hover,
+.main-nav ul li.active {
+    background-color: #3b82f6;
+    border-radius: 4px;
 }
 
-/* Conteúdo Principal */
+/* Conteúdo principal */
 .main-content {
     flex: 1;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
-/* Banner */
-.banner {
-    width: 100%;
-    height: 16rem; /* Tailwind: h-64 */
-    background-size: cover;
-    background-position: center;
+.hero {
+    background-image: url('/public/fundo.jpg'); /* Atualize com o caminho correto */
+    background-size: cover;           /* Faz com que a imagem cubra toda a área */
+    background-position: center;      /* Centraliza a imagem */
+    background-repeat: no-repeat;     /* Impede que a imagem se repita */
+    height: 400px;                    /* Altere conforme necessário */
+    width: 100%;                      /* Garante que a seção ocupe toda a largura */
+    margin: 0;                        /* Remove possíveis margens externas */
+    padding: 0;                       /* Remove possíveis espaçamentos internos */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.banner-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada para contraste */
+}
+
+.hero-overlay {
+    position: relative; /* Garante que o conteúdo apareça acima da camada ::after */
+    color: #fff;
     text-align: center;
-    color: white;
+    padding: 20px;
+}
+.hero-overlay {
+    position: relative; /* Garante que o conteúdo fique acima do ::after */
+    text-align: center;
+    padding: 20px;
+    /* Você pode ajustar a fonte, tamanho etc. */
 }
 
-/* Container de Cartões / Conteúdo Dinâmico */
-.card-container {
-    max-width: 80rem;
-    margin: 1.5rem auto;
-    background-color: white;
-    padding: 2rem;
-    border: 1px solid #93c5fd; /* Tailwind: border-blue-300 */
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Títulos e Textos dos Cartões */
-.card-title {
-    font-size: 1.875rem; /* Tailwind: text-3xl */
+.hero-overlay h1 {
+    font-size: 3rem;
     font-weight: bold;
-    color: #1e40af;
-    text-align: center;
-    margin-bottom: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
 
-.card-text {
-    font-size: 1rem;
-    color: #4b5563;
+/* Introdução */
+.intro {
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
 
-/* Grid para as Seções com Links */
+/* Seção de Links Rápidos */
+.home-links {
+    margin: 2rem 0;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
-/* Cartão Individual */
 .card {
-    background-color: #bfdbfe; /* Tailwind: bg-blue-200 */
+    background: #dce0e6;
     padding: 1rem;
-    border: 1px solid #60a5fa; /* Tailwind: border-blue-400 */
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo para os links/botões */
-.card a {
-    display: inline-block;
-    background-color: #1e40af; /* Tailwind: bg-blue-800 */
-    color: white;
+/* Cards de Valores */
+.valor-card {
+    border-left: 5px solid #004080;
+    transition: transform 0.2s ease;
+}
+
+.valor-card:hover {
+    transform: scale(1.05);
+    background-color: #e7f0ff;
+}
+
+/* Informações Institucionais */
+.detailed-info {
+    margin: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-section {
+    margin: 1.5rem 0;
+}
+
+/* Grid para cards (Valores, Portfólio, etc.) */
+.cards-grid,
+.cards-grid-c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Comunicados */
+.comunicados-section {
+    margin: 2rem 0;
+}
+
+.comunicado-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.comunicado-card:hover {
+    transform: translateY(-5px);
+}
+
+.comunicado-card .header {
+    background-color: #2b4c7e;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.comunicado-card .body {
+    padding: 1rem;
+    color: #333;
+}
+
+.comunicado-card .footer {
+    padding: 1rem;
+    background: #f1f1f1;
+    text-align: right;
+}
+
+.comunicado-card .footer a {
+    background-color: #2b4c7e;
+    color: #fff;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 4px;
     text-decoration: none;
-    margin-top: 0.5rem;
     transition: background-color 0.3s;
 }
 
-.card a:hover {
-    background-color: #1d4ed8; /* Aproximação do hover: bg-blue-700 */
+.comunicado-card .footer a:hover {
+    background-color: #2b4c7e;
 }
 
-/* Seções Internas */
-.card-section {
+/* Conteúdo das Gerências */
+.gerencia-section {
+    margin: 2rem 0;
+}
+
+.site-footer {
+    background-color: #2b4c7e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+.logo-footer {
+    width: auto;
+    max-height: 70px;  /* Define a altura máxima */
+    object-fit: contain; /* Garante que a imagem não fique distorcida */
+}
+
+/* Estilos para cada seção institucional */
+.secretaria-section,
+.diretoria-section {
+    margin-top: 5rem;
+    padding: 2rem;
     margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave para dar profundidade */
 }
 
-.card-section h2 {
-    font-size: 1.5rem; /* Tailwind: text-2xl */
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1d4ed8; /* Tailwind: text-blue-700 */
+/* Fundo e destaque para a Secretaria */
+.secretaria-section {
+    border-top: 5px solid #2b4c7e; /* Utilizando uma cor forte da identidade */
+    background: linear-gradient(135deg, #f6f9fc, #e9eff9);
 }
 
-.card-section ul {
-    list-style: disc;
-    margin-left: 1.25rem;
-    color: #374151;
+/* Fundo e destaque para a Diretoria */
+.diretoria-section {
+    border-top: 5px solid #1d4ed8; /* Uma variação de azul para criar contraste */
+    background: linear-gradient(135deg, #fdfdfd, #f0f8ff);
 }
 
-.card-section ul li {
-    margin-bottom: 0.5rem;
+/* Separador entre as seções */
+.separator {
+    text-align: center;
+    position: relative;
+    margin: 3rem 0;
+}
+
+.separator hr {
+    border: none;
+    border-top: 2px dashed #ccc;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.separator span {
+    background: #fff;
+    padding: 0 1rem;
+    position: relative;
+    top: -13px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+/* Outros ajustes que já possuímos */
+.section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Exemplo de hover nos cards de valores, para dar interatividade */
+.valor-card {
+    border-left: 5px solid #004080;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.valor-card:hover {
+    transform: scale(1.05);
+    background-color: #e7f0ff;
 }
