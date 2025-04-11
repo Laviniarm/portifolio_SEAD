@@ -95,8 +95,7 @@ export const paginas = [
     "GESED",
     "GEGOD",
     "GOCAP",
-    "Gerência 6",
-    "test"
+    "GECID",
 ];
 
 // Dados de comunicados (estáticos por enquanto)
@@ -177,16 +176,4 @@ export const sistemasGerencia = {
             link: "https://exemplo.com/sistemaJ"
         }
     ],
-    "Gerência 6": [
-        {
-            nome: "Sistema K",
-            descricao: "Sistema de auditoria",
-            link: "https://exemplo.com/sistemaK"
-        },
-        {
-            nome: "Sistema L",
-            descricao: "Sistema de suporte técnico",
-            link: "https://exemplo.com/sistemaL"
-        }
-    ]
 };
