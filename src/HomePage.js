@@ -20,21 +20,28 @@ const HomePage = () => {
                                 <div className="card">
                                     <h3>Organograma</h3>
                                     <p>Estrutura organizacional da secretaria</p>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://paraiba.pb.gov.br/diretas/secretaria-de-administracao/arquivos/2024_sead-organograma-em-21-03-2024.pdf/" target="_blank" rel="noopener noreferrer">
                                         Visualizar
                                     </a>
                                 </div>
                                 <div className="card">
-                                    <h3>Decreto</h3>
+                                    <h3>Site Paraíba Digital</h3>
+                                    <p>Serviços ao cidadão e acesso as informações </p>
+                                    <a href="https://paraibadigital.pb.gov.br/">
+                                        Visualizar
+                                    </a>
+                                </div>
+                                <div className="card">
+                                    <h3>Decretos</h3>
                                     <p>Normativas e regulamentações</p>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://paraiba.pb.gov.br/diretas/secretaria-de-administracao/institucional/legislacoes" target="_blank" rel="noopener noreferrer">
                                         Acessar
                                     </a>
                                 </div>
                                 <div className="card">
                                     <h3>PLO</h3>
                                     <p>Plano de Logística Organizacional</p>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://transparencia.pb.gov.br/orcamento/normas-orcamentarias" target="_blank" rel="noopener noreferrer">
                                         Consultar
                                     </a>
                                 </div>
@@ -44,9 +51,10 @@ const HomePage = () => {
                                         Associação Brasileira de Entidades Estaduais de Tecnologia da
                                         Informação e Comunicação
                                     </p>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://abep-tic.org.br/" target="_blank" rel="noopener noreferrer">
                                         Saiba Mais
                                     </a>
+                                    https://paraiba.pb.gov.br/diretas/secretaria-de-administracao/institucional/legislacoes
                                 </div>
                             </div>
                         </section>
@@ -54,7 +62,7 @@ const HomePage = () => {
                 <section className="detailed-info">
                     <div className="secretaria-section">
                         <h1 className="section-title text-center">
-                            Secretaria Executiva de Modernização e Transformação Digital
+                            SEMTD - Secretaria Executiva de Modernização e Transformação Digital
                         </h1>
                         <section className="card-section">
                             <h3>Missão</h3>
@@ -98,10 +106,10 @@ const HomePage = () => {
 
                     <div className="diretoria-section">
                         <h1 className="section-title text-center">
-                            Diretoria Executiva de Estratégia e Transformação Digital
+                           DEEST - Diretoria Executiva de Estratégia e Transformação Digital
                         </h1>
                         <section className="card-section">
-                            <h3>Missão</h3>
+                            <h3>Objetivo</h3>
                             <p>
                                 Promover a transformação digital no setor público, coordenando a estratégia,
                                 inovação e desenvolvimento de soluções digitais que otimizem processos e melhorem

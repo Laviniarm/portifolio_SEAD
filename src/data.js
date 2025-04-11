@@ -75,6 +75,14 @@ export const gerenciaContent = {
             "Excelência: Comprometer-se com a qualidade em todos os programas e iniciativas.",
             "Transparência: Comunicar de forma aberta e responsável os objetivos e resultados das ações."
         ]
+    },
+    GECID: {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum.",
+        mission: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum.",
+        vision: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum.",
+        values: [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum."
+        ]
     }
 };
 
@@ -87,7 +95,8 @@ export const paginas = [
     "GESED",
     "GEGOD",
     "GOCAP",
-    "Gerência 6"
+    "Gerência 6",
+    "test"
 ];
 
 // Dados de comunicados (estáticos por enquanto)
