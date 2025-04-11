@@ -8,31 +8,35 @@ const GerenciaPage = ({ paginaAtual }) => {
 
     return (
         <section className="gerencia-section">
-            <h1 className="section-title">{content.title}</h1>
-            <section className="card-section">
-                <h3>Missão</h3>
-                <p>{content.mission}</p>
+            <h1 className="section-title-gerencia">{content.title}</h1>
+
+            <section className="card-section-gerencia">
+                <h3>Objetivo</h3>
+                <p className="objetivo">{content.mission}</p>
             </section>
-            <section className="card-section">
-                <h3>Visão</h3>
-                <p>{content.vision}</p>
-            </section>
-            <section className="card-section">
-                <h3>Valores</h3>
-                <div className="cards-grid">
-                    {content.values.map((valor, index) => (
-                        <div className="card valor-card" key={index}>
-                            <h4>{valor}</h4>
-                        </div>
-                    ))}
+
+            <section className="card-section-gerencia">
+                <h3>Diretrizes de Atuação</h3>
+                <div className="cards-grid-gerencia">
+                    {content.values.map((valor, index) => {
+                        const [titulo, ...descricaoArray] = valor.split(':');
+                        const descricao = descricaoArray.join(':').trim();
+
+                        return (
+                            <div className="card-gerencia" key={index}>
+                                <h4 className="card-titulo">{titulo}</h4>
+                                <p className="card-descricao">{descricao}</p>
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
-            {/* Portfólio de Sistemas */}
-            <section className="card-section">
+
+            <section className="card-section-gerencia">
                 <h3>Portfólio de Sistemas</h3>
-                <div className="cards-grid">
+                <div className="cards-grid-gerencia">
                     {sistemasGerencia[paginaAtual]?.map((sistema, index) => (
-                        <div key={index} className="card">
+                        <div key={index} className="card-gerencia">
                             <h4>{sistema.nome}</h4>
                             <p>{sistema.descricao}</p>
                             <a href={sistema.link} target="_blank" rel="noopener noreferrer">
@@ -42,6 +46,7 @@ const GerenciaPage = ({ paginaAtual }) => {
                     ))}
                 </div>
             </section>
+
         </section>
     );
 };

@@ -47,7 +47,7 @@ body {
 
 .main-nav ul li:hover,
 .main-nav ul li.active {
-    background-color: #3b82f6;
+    background-color: #073a7c;
     border-radius: 4px;
 }
 
@@ -114,6 +114,68 @@ body {
 .home-links {
     margin: 2rem 0;
 }
+.home-links .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.card-l {
+    background-color: #dce0e6;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 102, 204, 0.15); /* destaque suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-l:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 102, 204, 0.25);
+}
+
+.card-l h3 {
+    font-size: 1.25rem;
+    color: #2b4c7e;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.card-l p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.card-l a {
+    background-color: #2b4c7e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-l a:hover {
+    background-color: #004d99;
+}
+
+.card-grid-l {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.home-links .section-title {
+    font-size: 2rem;
+    color: #2b4c7e;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 
 .card-grid {
     display: grid;
@@ -185,7 +247,7 @@ body {
 }
 
 .comunicado-card .header {
-    background-color: #2b4c7e;
+    background-color: #395683;
     color: #fff;
     padding: 0.75rem 1rem;
     font-size: 1.25rem;
@@ -222,14 +284,14 @@ body {
 }
 
 .site-footer {
-    background-color: #2b4c7e;
+    background-color: #395683;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
 .logo-footer {
     width: auto;
-    max-height: 70px;  /* Define a altura máxima */
+    max-height: 50px;  /* Define a altura máxima */
     object-fit: contain; /* Garante que a imagem não fique distorcida */
 }
 
@@ -293,4 +355,147 @@ body {
 .valor-card:hover {
     transform: scale(1.05);
     background-color: #e7f0ff;
+}
+
+.objetivo-card {
+    margin-top: 1rem;
+}
+
+/* Modal bonito */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #d00;
+}
+
+.gerencia-section {
+    padding: 2rem;
+    background-color: #f9fafb;
+}
+
+.section-title-gerencia {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+}
+
+.card-section-gerencia {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.card-section-gerencia h3{
+    margin-bottom: 1rem;
+}
+
+.objetivo {
+    font-size: 1.125rem; /* maior que o padrão */
+    font-weight: 500;
+    line-height: 1.8;
+    color: #2d3748; /* tom escuro para boa leitura */
+    background-color: #f7fafc; /* cinza bem claro para destaque */
+    padding: 1rem;
+    border-left: 4px solid #004080; /* linha azul à esquerda */
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.card-section-gerencia p::first-letter {
+     font-weight: 500;
+     font-size: 1.1rem;
+ }
+
+.cards-grid-gerencia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card-gerencia {
+    color: #2d3748; /* tom escuro para boa leitura */
+    background-color: #f7fafc; /* cinza bem claro para destaque */
+    padding: 1rem;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.card-gerencia:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.card-gerencia h4 {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.card-gerencia p {
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.card-gerencia a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #004080;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-gerencia a:hover {
+    text-decoration: underline;
+}
+
+.cargo-card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+}
+
+.cargo-titulo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
 }
