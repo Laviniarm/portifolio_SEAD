@@ -1,9 +1,18 @@
-// Header.js
-import React from 'react';
-import { FaBars } from "react-icons/fa";
-import { paginas } from './data'; // Importa a lista de páginas
+import React, { useState } from 'react';
+import { paginas } from './data';
+
+const gerencias = [
+    "GOGPD",
+    "GEPRON",
+    "GESED",
+    "GEGOD",
+    "GOCAP",
+    "GECID"
+];
 
 const Header = ({ paginaAtual, setPaginaAtual }) => {
+    const [showDropdown, setShowDropdown] = useState(false);
+
     return (
         <header className="site-header">
             <img src="/DIGITAL.png" alt="Logo Institucional" className="logo" />
@@ -18,6 +27,30 @@ const Header = ({ paginaAtual, setPaginaAtual }) => {
                             {pagina}
                         </li>
                     ))}
+
+                    {/* Item Gerências com Dropdown */}
+                    <li
+                        className="dropdown"
+                        onMouseEnter={() => setShowDropdown(true)}
+                        onMouseLeave={() => setShowDropdown(false)}
+                    >
+                        <span className={gerencias.includes(paginaAtual) ? "active" : ""}>Gerências</span>
+                        {showDropdown && (
+                            <ul className="dropdown-menu">
+                                {gerencias.map(gerencia => (
+                                    <li
+                                        key={gerencia}
+                                        onClick={() => {
+                                            setPaginaAtual(gerencia);
+                                            setShowDropdown(false);
+                                        }}
+                                    >
+                                        {gerencia}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
                 </ul>
             </nav>
         </header>

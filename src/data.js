@@ -90,12 +90,6 @@ export const gerenciaContent = {
 export const paginas = [
     "Home",
     "Comunicados",
-    "GOGPD",
-    "GEPRON",
-    "GESED",
-    "GEGOD",
-    "GOCAP",
-    "GECID",
 ];
 
 // Dados de comunicados (estáticos por enquanto)
