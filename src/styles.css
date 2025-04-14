@@ -22,7 +22,7 @@ body {
 .site-header {
     background-color: #2b4c7e;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem 1rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -498,4 +498,62 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
+}
+
+/* header menu */
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Itens principais do menu */
+.main-nav li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* abaixo do item pai */
+    left: 0;
+    background-color: #92a5c1;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Itens dentro do dropdown */
+.dropdown-menu li {
+    padding: 10px 15px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #395683;
+}
+
+/* Estilo para item ativo */
+.main-nav .active {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .dropdown-menu {
+        position: static;
+        border: none;
+        box-shadow: none;
+    }
 }

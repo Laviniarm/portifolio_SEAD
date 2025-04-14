@@ -1,4 +1,3 @@
-// PortfolioPage.js
 import React, { useState } from 'react';
 import Header from './Header';
 import HomePage from './HomePage';
