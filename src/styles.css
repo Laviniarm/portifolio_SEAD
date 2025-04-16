@@ -232,6 +232,13 @@ body {
     margin: 2rem 0;
 }
 
+.cards-grid-c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
 .comunicado-card {
     background: #fff;
     border: 1px solid #ccc;
@@ -239,15 +246,16 @@ body {
     overflow: hidden;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .comunicado-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .comunicado-card .header {
-    background-color: #395683;
+    background-color: #073a7c;
     color: #fff;
     padding: 0.75rem 1rem;
     font-size: 1.25rem;
@@ -278,10 +286,6 @@ body {
     background-color: #2b4c7e;
 }
 
-/* Conteúdo das Gerências */
-.gerencia-section {
-    margin: 2rem 0;
-}
 
 .site-footer {
     background-color: #395683;
@@ -405,86 +409,116 @@ body {
 
 .gerencia-section {
     padding: 2rem;
-    background-color: #f9fafb;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .section-title-gerencia {
-    text-align: center;
     font-size: 2rem;
-    color: #1a202c;
-    margin-bottom: 1.5rem;
-}
-
-.card-section-gerencia {
+    font-weight: bold;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    text-align: center;
+    color: #1e3a8a;
 }
 
-.card-section-gerencia h3{
+/* Seções internas */
+.card-section-gerencia {
+    margin-bottom: 3rem;
+}
+
+.card-section-gerencia h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #111827;
 }
 
-.objetivo {
-    font-size: 1.125rem; /* maior que o padrão */
-    font-weight: 500;
-    line-height: 1.8;
-    color: #2d3748; /* tom escuro para boa leitura */
-    background-color: #f7fafc; /* cinza bem claro para destaque */
+/* Destaque do objetivo */
+.destaque-com-borda {
+    border-left: 4px solid #2563eb;
+    background-color: #f1f5f9;
     padding: 1rem;
-    border-left: 4px solid #004080; /* linha azul à esquerda */
     border-radius: 0.375rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #374151;
 }
 
-.card-section-gerencia p::first-letter {
-     font-weight: 500;
-     font-size: 1.1rem;
- }
-
+/* Grid de cards */
 .cards-grid-gerencia {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
 }
 
+/* Cards padrão */
 .card-gerencia {
-    color: #2d3748; /* tom escuro para boa leitura */
-    background-color: #f7fafc; /* cinza bem claro para destaque */
+    background-color: #ffffff;
     padding: 1rem;
-    border-radius: 8px;
-
+    border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
 }
 
 .card-gerencia:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .card-gerencia h4 {
     font-size: 1.1rem;
-    color: #2d3748;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
-.card-gerencia p {
+.card-descricao {
+    margin-top: 0.5rem;
     font-size: 0.95rem;
-    color: #4a5568;
+    color: #4b5563;
 }
 
+/* Animação */
+.animated-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ícones nos cards */
+.card-icone {
+    font-size: 1.8rem;
+    color: #073a7c;
+    margin-bottom: 0.25rem;
+}
+
+
+/* Estilo para links */
 .card-gerencia a {
     display: inline-block;
-    margin-top: 0.5rem;
-    color: #004080;
+    margin-top: 0.75rem;
+    color: #1d4ed8;
     text-decoration: none;
     font-weight: 500;
 }
 
 .card-gerencia a:hover {
     text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+    .section-title-gerencia {
+        font-size: 1.5rem;
+    }
+
+    .card-gerencia {
+        padding: 0.75rem;
+    }
 }
 
 .cargo-card {
