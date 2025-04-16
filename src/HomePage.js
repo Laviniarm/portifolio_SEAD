@@ -27,7 +27,7 @@ const HomePage = () => {
 
                 {/* Seção de Links Rápidos */}
                 <section className="home-links">
-                    <h2 className="section-title">Informações Essenciais</h2>
+                    <h2 className="section-title">Base Digital</h2>
                     <div className="card-grid-l">
                         <div className="card-l">
                             <h3>Organograma</h3>
@@ -76,7 +76,7 @@ const HomePage = () => {
                 <section className="detailed-info">
                     <div className="secretaria-section">
                         <h1 className="section-title text-center">
-                            SEMTD - Secretaria Executiva de Modernização e Transformação Digital
+                           Secretaria Executiva de Modernização e Transformação Digital (SEMTD)
                         </h1>
                         <section className="card-section">
                             <h3>Objetivo</h3>
@@ -145,7 +145,7 @@ const HomePage = () => {
 
                     <div className="diretoria-section">
                         <h1 className="section-title text-center">
-                            DEEST - Diretoria Executiva de Estratégia e Transformação Digital
+                           Diretoria Executiva de Estratégia e Transformação Digital (DEEST)
                         </h1>
                         <section className="card-section">
                             <h3>Objetivo</h3>
