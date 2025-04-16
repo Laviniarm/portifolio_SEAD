@@ -1,10 +1,9 @@
-# 🌐 Secretaria Executiva de Modernização e Transformação Digital
+# Secretaria Executiva de Modernização e Transformação Digital
 
 Este projeto é um sistema web desenvolvido para apresentar de forma clara e interativa as informações da Secretaria Executiva de Modernização e Transformação Digital e suas Gerências.
 
----
 
-## 📌 Objetivo
+## Objetivo
 
 Oferecer uma interface amigável para visualização de:
 
@@ -14,9 +13,8 @@ Oferecer uma interface amigável para visualização de:
 - Portfólio de sistemas sob responsabilidade
 - Comunicados institucionais
 
----
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React** – Biblioteca principal para construção da interface
 - **CSS Modules** – Estilização de componentes de forma modular
@@ -24,13 +22,12 @@ Oferecer uma interface amigável para visualização de:
 - **JavaScript (ES6+)**
 - **HTML5 / CSS3**
 
----
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
 ```bash
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Laviniarm/portifolio_SEAD.git
 
 npm install
 
