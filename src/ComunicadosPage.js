@@ -4,7 +4,6 @@ import { comunicados } from './data';
 const ComunicadosPage = () => {
     return (
         <section className="comunicados-section">
-            <h1 className="section-title">Comunicados</h1>
             <div className="cards-grid-c">
                 {comunicados.map((comunicado, index) => (
                     <div key={index} className="comunicado-card">

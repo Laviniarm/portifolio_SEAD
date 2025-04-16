@@ -4,7 +4,6 @@ import HomePage from './HomePage';
 import ComunicadosPage from './ComunicadosPage';
 import GerenciaPage from './GerenciaPage';
 import Footer from './Footer';
-import { paginas } from './data';
 
 const PortfolioPage = () => {
     const [paginaAtual, setPaginaAtual] = useState("Home");

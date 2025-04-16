@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-
-
 const HomePage = () => {
     const [modalAberto, setModalAberto] = useState(false);
     const [modalTitulo, setModalTitulo] = useState("");
